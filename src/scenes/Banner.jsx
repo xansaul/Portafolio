@@ -18,6 +18,7 @@ export const Banner = ({children}) => {
     
     <div className="h-screen relative">
       <Canvas
+      flat linear
         gl={{
           outputEncoding: THREE.sRGBEncoding,
           toneMapping: THREE.ACESFilmicToneMapping,

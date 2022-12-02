@@ -2,18 +2,20 @@
 import React, { useRef } from "react";
 import { useGLTF,Html } from "@react-three/drei";
 
+
 export function Laptop(props) {
   const { nodes, materials } = useGLTF("/glbs/Laptop.glb");
   const pixels={
     width:'1640px',
-    height:'1155px',
+    height:'1159px',
     position:[0,1,-12]
   }
   if(window.innerWidth < 567 ){
-    pixels.width='1235px'
+    pixels.width='1238px'
     pixels.height='879px'
     pixels.position=[0,1.8,-12]
   }
+  
   return (
     <group {...props} dispose={null}>
       <group position={[0, -26.14, 10.95]} scale={13.21}>
@@ -54,10 +56,12 @@ export function Laptop(props) {
       >
           <Html 
           transform
-          style={{overflowY:'hidde',backgroundColor:'red',width:pixels.width,height:pixels.height}}
+          style={{overflowY:'hidde',backgroundColor:'black',width:pixels.width,height:pixels.height}}
           position={pixels.position} 
           >
-            <h1 className="text-9xl ">Hola</h1>
+            <div className="text-white text-3xl h-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-center">
+              <h1></h1>
+            </div>
         </Html>
       </mesh>
       <mesh
