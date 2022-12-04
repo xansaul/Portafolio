@@ -1,19 +1,23 @@
 
-import React, { useRef } from "react";
+import React from "react";
 import { useGLTF,Html } from "@react-three/drei";
+import { WhoAmI } from "../pagesLaptop/components/WhoAmI";
+import { Nav } from "../pagesLaptop/components/Nav";
 
 
 export function Laptop(props) {
+
+
   const { nodes, materials } = useGLTF("/glbs/Laptop.glb");
   const pixels={
     width:'1640px',
     height:'1159px',
-    position:[0,1,-12]
+    position:[0,1,-13.6]
   }
   if(window.innerWidth < 567 ){
-    pixels.width='1238px'
+    pixels.width='1243px'
     pixels.height='879px'
-    pixels.position=[0,1.8,-12]
+    pixels.position=[0,1.2,-12]
   }
   
   return (
@@ -55,13 +59,18 @@ export function Laptop(props) {
         scale={13.21}
       >
           <Html 
-          transform
-          style={{overflowY:'hidde',backgroundColor:'black',width:pixels.width,height:pixels.height}}
-          position={pixels.position} 
+            transform
+            style={{
+              overflow:'auto',
+              backgroundColor:'#E0DEDE',
+              width:pixels.width,
+              height:pixels.height,
+            }}
+            position={pixels.position} 
+            className="rounded-lg noScroll "
           >
-            <div className="text-white text-3xl h-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-center">
-              <h1></h1>
-            </div>
+            <WhoAmI/>
+            <Nav/>
         </Html>
       </mesh>
       <mesh

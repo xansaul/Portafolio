@@ -9,7 +9,7 @@ export const Me = () => {
           ¿Quién soy?
         </h1>
         <p className="my-6 sm:text-xl w-auto text-center">
-          Estudiante de ingeniería en computación, y aficionado a la programación y al desarrollo web. Soy un joven que le gusta estar en constante aprendizaje de nuevas tecnologías y estar practicándolas, soy una persona que aprende muy rápido y estoy aprendiendo a aplicar otros campos dentro de la informática.
+          Estudiante de ingeniería en computación, aficionado a la programación y al desarrollo web. Soy un joven que le gusta estar en constante aprendizaje de nuevas tecnologías y estar practicándolas, soy una persona que aprende muy rápido y estoy aprendiendo a aplicar otros campos dentro de la informática.
         </p>
       </div>
     </div>
