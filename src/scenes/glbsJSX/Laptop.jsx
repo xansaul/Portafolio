@@ -10,9 +10,9 @@ export function Laptop(props) {
 
   const { nodes, materials } = useGLTF("/glbs/Laptop.glb");
   const pixels={
-    width:'1640px',
-    height:'1159px',
-    position:[0,1,-13.6]
+    width:'1270px',
+    height:'899px',
+    position:[0,2.6,-13.6]
   }
   if(window.innerWidth < 567 ){
     pixels.width='1243px'

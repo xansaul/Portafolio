@@ -9,6 +9,7 @@ export const App = () => {
     <div className='h-screen bg-base-blue'>
       <Banner>
         <Me/>
+        
       </Banner>
       <PageLaptop/>
     </div>
