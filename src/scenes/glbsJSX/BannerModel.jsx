@@ -2,18 +2,21 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from 'three'
 
 export function BannerModel(props) {
-
+  let delta=0
+  const clock=new THREE.Clock()
+  const speed=.0005
   const {coords}=props
-
+  
   const group = useRef()
-  console.log(props)
   useFrame(() => {
+    delta = clock.getDelta();
     group.current.rotation.y += 0.001;
     group.current.rotation.x += 0.001;
-    group.current.position.x = -Math.sin( .5 * Math.PI * ( coords.x - .5 )*.0003 )
-    group.current.position.y = Math.sin( .5 * Math.PI * ( coords.y - .5 )*.0002 )
+    group.current.position.x = -Math.sin( .5 * Math.PI * (coords.x - (.5*delta) )*speed)
+    group.current.position.y = Math.sin( .5 * Math.PI * ( coords.y - (.5*delta)  )*speed )
     
   })
   

@@ -1,28 +1,12 @@
 
-import React from "react";
-import { useGLTF,Html } from "@react-three/drei";
-import { WhoAmI } from "../pagesLaptop/components/WhoAmI";
-import { Nav } from "../pagesLaptop/components/Nav";
-
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Laptop(props) {
-
-
   const { nodes, materials } = useGLTF("/glbs/Laptop.glb");
-  const pixels={
-    width:'1270px',
-    height:'899px',
-    position:[0,2.6,-13.6]
-  }
-  if(window.innerWidth < 567 ){
-    pixels.width='1243px'
-    pixels.height='879px'
-    pixels.position=[0,1.2,-12]
-  }
-  
   return (
     <group {...props} dispose={null}>
-      <group position={[0, -26.14, 10.95]} scale={13.21}>
+      <group position={[0, 1.51, 0.77]} rotation={[-0.26, 0, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -36,66 +20,48 @@ export function Laptop(props) {
           material={materials.Black}
         />
       </group>
-      <group position={[0, -26.14, 10.95]} scale={13.21}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane007.geometry}
-          material={materials.Black}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane007_1.geometry}
-          material={materials.grey}
-        />
-      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane007.geometry}
+        material={materials.Black}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane007_1.geometry}
+        material={materials.grey}
+      />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Screen.geometry}
         material={materials.Screen}
-        position={[0.01, 143.57, -60.11]}
-        scale={13.21}
-      >
-          <Html 
-            transform
-            style={{
-              overflow:'auto',
-              backgroundColor:'#E0DEDE',
-              width:pixels.width,
-              height:pixels.height,
-            }}
-            position={pixels.position} 
-            className="rounded-lg noScroll "
-          >
-            <WhoAmI/>
-            <Nav/>
-        </Html>
-      </mesh>
+        position={[0, 12.85, -5.38]}
+      />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Teclas.geometry}
         material={materials.Keys}
-        position={[0, -26.14, 10.95]}
-        scale={13.21}
+        position={[0, 1.51, 0.77]}
+        rotation={[-0.26, 0, 0]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Touchpad.geometry}
         material={materials.Keys}
-        position={[0, -26.14, 10.95]}
-        scale={13.21}
+        position={[0, 1.51, 0.77]}
+        rotation={[-0.26, 0, 0]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.TouchpadBtns.geometry}
         material={materials.Keys}
-        position={[0, -26.14, 10.95]}
-        scale={13.21}
+        position={[0, 1.51, 0.77]}
+        rotation={[-0.26, 0, 0]}
       />
     </group>
   );
