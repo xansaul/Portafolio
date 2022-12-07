@@ -6,6 +6,7 @@ import React, { useRef } from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import {WhoAmI} from '../pagesLaptop/components/WhoAmI'
 import {Nav} from '../pagesLaptop/components/Nav'
+import { ArrowDown } from "../pagesLaptop/components/ArrowDown";
 
 export function Room(props) {
   let position=[0,12.851,-5.38028]
@@ -155,6 +156,7 @@ export function Room(props) {
         }}>
           <WhoAmI/>
           <Nav/>
+          <ArrowDown/>
         </Html>
       </mesh>
       <mesh

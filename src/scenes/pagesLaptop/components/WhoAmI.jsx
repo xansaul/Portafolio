@@ -8,7 +8,7 @@ import bubble4 from '../assets/4.png'
 
 export const WhoAmI = () => {
   return (
-    <div className="h-full w-full sm:text-6xl text-6xl relative font-bold">
+    <div className="h-full w-full sm:text-6xl text-6xl relative font-bold ">
       <img src={bubble} className="absolute -top-20 -left-20 z-10  w-56 " />
       <img src={bubble2} className="absolute -bot-20 -right-0 z-10 w-56" />
       <img src={bubble} className="absolute -bottom-20 -left-20 z-10 w-56" />

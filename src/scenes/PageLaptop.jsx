@@ -11,8 +11,8 @@ export const PageLaptop = () => {
   }
 
   const lightsConfig={
-    ambient:1.5,
-    spotOne:.8
+    ambient:{intensity:1.5,color:'#5976F3'},
+    spotOne:{intensity:.8,color:'#B7CCF9'}
   }
   let orbitControls=true
   let objScale=[1,1,1]
@@ -20,18 +20,20 @@ export const PageLaptop = () => {
   let objPosition=[0,-12,-10]
   
   if(window.innerWidth < 567 ){
-    cameraTransforms.position= [0,-9, 4]
-    cameraTransforms.rotation=[-1,3.1,0]
+    cameraTransforms.position= [0,20, 10]
+    cameraTransforms.rotation=[-1.2,3.1,0]
     objScale=[.1,.1,.1]
     objPosition=[0,40,-20]
     canZoom=true
     orbitControls=false
-    lightsConfig.ambient=6
-    lightsConfig.spotOne=.2
+    lightsConfig.ambient.intensity=3
+    lightsConfig.ambient.color='#A2B4FF'
+    lightsConfig.spotOne.intensity=.1
+    lightsConfig.spotOne.color='#D7DEFE'
   }
 
   return (
-    <div className="sm:h-screen h-2/5">
+    <div className="h-screen bg-gradient-to-b from-base-blue-200 to-base-blue-300">
       <Canvas
         flat 
         linear
@@ -45,9 +47,9 @@ export const PageLaptop = () => {
             position:[0,-20,-20],
           }}
       >
-        <color attach="background" args={["#01021B"]} />
-        <spotLight position={[0,50, 1]} color="#B7CCF9" intensity={lightsConfig.spotOne}/>
-        <ambientLight intensity={lightsConfig.ambient} color="#3F72E7"/>
+        {/* <color attach="background" args={["#01021B"]} /> */}
+        <spotLight position={[0,50, 1]} color={lightsConfig.spotOne.color} intensity={lightsConfig.spotOne.intensity}/>
+        <ambientLight intensity={lightsConfig.ambient.intensity} color={lightsConfig.ambient.color} />
         <PerspectiveCamera  rotation={cameraTransforms.rotation} position={cameraTransforms.position} > 
           {/* <Laptop position={objPosition} scale={objScale} /> */}
           <Room/>
