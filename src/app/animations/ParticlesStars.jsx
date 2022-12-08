@@ -25,7 +25,7 @@ export const ParticlesStars = () => {
         options={{
           background: {
             color: {
-              value: '#091135',
+              value: '#05102C',
             },
           },
           fullScreen:{
@@ -52,7 +52,7 @@ export const ParticlesStars = () => {
                 enable: true,
                 area: 800,
               },
-              value: 150,
+              value: 50,
             },
             opacity: {
               value: 0.8,
