@@ -5,7 +5,7 @@ import pdf from '../../assets/pdf/Gravity.pdf'
 
 export const Experience = () => {
   return (
-    <div className="text-white h-auto my-4" id="experience">
+    <div className="text-white h-screen my-4" id="experience">
       <div className="w-10/12 m-auto">
         <h2 className="text-3xl font-semibold block mt-4">
           Experiencia

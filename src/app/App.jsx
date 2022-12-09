@@ -1,5 +1,6 @@
 import React from 'react'
 import { Banner } from '../scenes/Banner'
+import { CityScene } from '../scenes/CityScene'
 import { PageLaptop } from '../scenes/PageLaptop'
 import { ParticlesStars } from './animations/ParticlesStars'
 import { Experience } from './components/Experience'
@@ -18,6 +19,7 @@ export const App = () => {
       <PageLaptop/>
       <Technologies/>
       <Experience/>
+      <CityScene/>
       <Footer/>
     </div>
   )
