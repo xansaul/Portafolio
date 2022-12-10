@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d2d3ab7c.css",
+    "main.js": "/static/js/main.3c97b4e4.js",
+    "static/js/787.745797fe.chunk.js": "/static/js/787.745797fe.chunk.js",
+    "static/media/Gravity.pdf": "/static/media/Gravity.bfa76e5d1bce3a2ff4eb.pdf",
+    "static/media/planets.png": "/static/media/planets.20bd9eea79a47dba8b60.png",
+    "static/media/cube.svg": "/static/media/cube.9f75434235bc676a4a5a4dc94418fee3.svg",
+    "static/media/react.png": "/static/media/react.464a6a0cc6faefb72cb4.png",
+    "static/media/django.png": "/static/media/django.4c399895f677cd3bfbc8.png",
+    "static/media/unity.png": "/static/media/unity.dc710fc2319bdbb6858c.png",
+    "static/media/2.png": "/static/media/2.c108882ca720a6c68c0e.png",
+    "static/media/4.png": "/static/media/4.17af738d3aed62e593be.png",
+    "static/media/3.png": "/static/media/3.2b5a46184fbd26ee0252.png",
+    "static/media/1.png": "/static/media/1.fc09adac6317792c6ecb.png",
+    "static/media/arrow.svg": "/static/media/arrow.15278b3cfe616b29b92cbc32c4b62cc1.svg",
+    "static/media/github.svg": "/static/media/github.f4f316804f6c468799b01fab35bd3220.svg",
+    "static/media/instagram.svg": "/static/media/instagram.c2056460bbbf6c051f72df6d7c2fa6dc.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.386d46fc1dc9ea908ed8bb6235009335.svg",
+    "index.html": "/index.html",
+    "main.d2d3ab7c.css.map": "/static/css/main.d2d3ab7c.css.map",
+    "main.3c97b4e4.js.map": "/static/js/main.3c97b4e4.js.map",
+    "787.745797fe.chunk.js.map": "/static/js/787.745797fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2d3ab7c.css",
+    "static/js/main.3c97b4e4.js"
+  ]
+}
