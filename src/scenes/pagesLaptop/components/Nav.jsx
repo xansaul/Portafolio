@@ -9,13 +9,18 @@ export const Nav = () => {
       <nav className="h-full w-6/12 top-0 flex items-center justify-center ml-5">
         <ul>
           <li className="hover:bg-clip-text hover:bg-gradient-to-t from-purple-400 to-pink-600 hover:text-transparent hover:translate-x-5 ease-in duration-100 hover:cursor-pointer">
-            <Link activeClass="active" smooth spy to="skills">
+            <Link smooth spy to="skills">
               Skills
             </Link>
             </li>
           <li className="hover:bg-clip-text hover:bg-gradient-to-t from-purple-400 to-pink-600 hover:text-transparent  hover:translate-x-5 ease-in duration-100 hover:cursor-pointer">
-            <Link activeClass="active" smooth spy to="experience">
+            <Link smooth spy to="experience">
               Experiencia
+            </Link>
+          </li>
+          <li className="hover:bg-clip-text hover:bg-gradient-to-t from-purple-400 to-pink-600 hover:text-transparent  hover:translate-x-5 ease-in duration-100 hover:cursor-pointer">
+            <Link smooth spy to="city">
+              Contacto
             </Link>
           </li>
         </ul>

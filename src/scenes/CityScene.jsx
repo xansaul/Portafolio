@@ -4,28 +4,29 @@ import { PerspectiveCamera, OrbitControls, Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import { City } from './glbsJSX/City'
 import { useRef,useState } from 'react'
+import { Ovni } from './glbsJSX/Ovni'
 
-export const CityScene = () => {
+export const CityScene = ({children}) => {
 
   const refCamera=useRef()
-  //[20,-130,150]
+
   const cameraTransforms= {
     position:[-30,-120,-180],
     rotation:[.2,0,0]
   }
 
   const lightsConfig={
-    ambient:{intensity:.6,color:'#5976F3'},
-    directional:{intensity:1.5,color:'#09408E'}
+    ambient:{intensity:.7,color:'#5976F3'},
+    directional:{intensity:2,color:'#09408E'}
   }
 
   if(window.innerWidth < 567 ){
-    cameraTransforms.position= [0,20, 10]
-    cameraTransforms.rotation=[-1.2,3.1,0]
-    lightsConfig.ambient.intensity=3
-    lightsConfig.ambient.color='#A2B4FF'
-    lightsConfig.spotOne.intensity=.1
-    lightsConfig.spotOne.color='#D7DEFE'
+    cameraTransforms.position= [-30,-120,-280]
+    cameraTransforms.rotation=[0,0,0]
+    lightsConfig.ambient.intensity=.4
+    lightsConfig.ambient.color='#79B1FC'
+    lightsConfig.directional.intensity=5
+    // lightsConfig.directional.color='#D7DEFE'
   }
 
   const [coords,setCoords] = useState({
@@ -46,9 +47,8 @@ export const CityScene = () => {
 
 
   return (
-    <div className="h-screen bg-base-blue-400">
+    <div className="h-screen bg-base-blue-400 relative" id="city" onMouseMove={handleMouseMove}>
       <Canvas
-        onMouseMove={handleMouseMove}
         flat 
         linear
         gl={{
@@ -60,16 +60,18 @@ export const CityScene = () => {
             fov:65,
           }}
       >
+
         <directionalLight color={lightsConfig.directional.color} intensity={lightsConfig.directional.intensity} />
         <ambientLight intensity={lightsConfig.ambient.intensity} color={lightsConfig.ambient.color} />
         <PerspectiveCamera ref={refCamera} rotation={cameraTransforms.rotation} position={cameraTransforms.position} > 
-          {/* <Laptop position={objPosition} scale={objScale} /> */}
-          {/* <Room/> */}
           <City refCamera={refCamera} coords={coords} rotation={[0,1.7,0]}/>
-          <Stars saturation={4} count={4000} speed={2}  radius={250}/>
+          <Stars saturation={4} count={4000} speed={2}  radius={350} />
+          <Ovni scale={[7,7,7]} position={[300,400,-600]} rotation={[-.2,0,0]}/>
         </PerspectiveCamera>
-
+          
       </Canvas>
+        {children}
     </div>
   )
 }
+

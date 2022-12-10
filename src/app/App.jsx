@@ -3,6 +3,7 @@ import { Banner } from '../scenes/Banner'
 import { CityScene } from '../scenes/CityScene'
 import { PageLaptop } from '../scenes/PageLaptop'
 import { ParticlesStars } from './animations/ParticlesStars'
+import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
 import { Footer } from './components/Footer'
 import { Me } from './components/Me'
@@ -19,7 +20,9 @@ export const App = () => {
       <PageLaptop/>
       <Technologies/>
       <Experience/>
-      <CityScene/>
+      <CityScene>
+        <Contact/>
+      </CityScene>
       <Footer/>
     </div>
   )

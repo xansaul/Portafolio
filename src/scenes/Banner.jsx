@@ -49,7 +49,7 @@ export const Banner = ({children}) => {
 
   return (
     
-    <div className="h-screen w-full relative  bg-gradient-to-b from-base-blue-100 to-base-blue-200" onMouseMove={handleMouseMove}>
+    <div className="h-screen w-full relative  bg-gradient-to-b from-base-blue-100 to-base-blue-200" onMouseMove={handleMouseMove} id="banner">
 
       <Canvas
         flat 
@@ -62,7 +62,7 @@ export const Banner = ({children}) => {
         camera={{
           fov:65
         }}
-      >
+      >       
         {/* <color attach="background" args={["#01021B"]} /> */}
         <ambientLight intensity={.1} color="#A5BDFC"/>
         <PerspectiveCamera position={cameraTransform.position} rotation={cameraTransform.rotation} >

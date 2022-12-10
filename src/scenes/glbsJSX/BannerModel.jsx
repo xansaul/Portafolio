@@ -13,8 +13,8 @@ export function BannerModel(props) {
   const group = useRef()
   useFrame(() => {
     delta = clock.getDelta();
-    group.current.rotation.y += 0.001;
-    group.current.rotation.x += 0.001;
+    group.current.rotation.y += .07*delta;
+    group.current.rotation.x += .07*delta;
     group.current.position.x = -Math.sin( .5 * Math.PI * (coords.x - (.5*delta) )*speed)
     group.current.position.y = Math.sin( .5 * Math.PI * ( coords.y - (.5*delta)  )*speed )
     

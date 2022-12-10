@@ -8,8 +8,8 @@ export function City(props) {
   const { nodes, materials } = useGLTF("/glbs/city.glb");
   const {coords,refCamera}=props
   useFrame(()=>{
-    target.x = ( 1 - coords.x ) * 0.0002;
-    target.y = ( 1 - coords.y ) * 0.0002;
+    target.x = ( 1 - coords.x ) * 0.0004;
+    target.y = ( 1 - coords.y ) * 0.0004;
     
     refCamera.current.rotation.x += 0.05 * ( target.y - refCamera.current.rotation.x  )
     refCamera.current.rotation.y += 0.05 * ( target.x - refCamera.current.rotation.y   )
@@ -26,7 +26,7 @@ export function City(props) {
               material={materials.Building_7}
             />
           </group>
-          <group position={[-31.95, 0, 23.67]}>
+          <group position={[-31.95, 0, 23.67]} >
             <mesh
               castShadow
               receiveShadow
