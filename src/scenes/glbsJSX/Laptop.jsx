@@ -1,9 +1,9 @@
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-
+import laptop from '../../assets/glbs/Laptop.glb'
 export function Laptop(props) {
-  const { nodes, materials } = useGLTF("/glbs/Laptop.glb");
+  const { nodes, materials } = useGLTF(laptop);
   return (
     <group {...props} dispose={null}>
       <group position={[0, 1.51, 0.77]} rotation={[-0.26, 0, 0]}>
@@ -67,4 +67,4 @@ export function Laptop(props) {
   );
 }
 
-useGLTF.preload("/glbs/Laptop.glb");
+useGLTF.preload(laptop);

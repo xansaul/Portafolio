@@ -2,10 +2,11 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from 'three'
+import city from '../../assets/glbs/city.glb'
 
 export function City(props) {
   const target = new THREE.Vector2();
-  const { nodes, materials } = useGLTF("/glbs/city.glb");
+  const { nodes, materials } = useGLTF(city);
   const {coords,refCamera}=props
   useFrame(()=>{
     target.x = ( 1 - coords.x ) * 0.0004;
@@ -106,4 +107,4 @@ export function City(props) {
   );
 }
 
-useGLTF.preload("/glbs/city.glb");
+useGLTF.preload(city);

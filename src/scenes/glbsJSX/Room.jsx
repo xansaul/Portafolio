@@ -8,13 +8,15 @@ import {WhoAmI} from '../pagesLaptop/components/WhoAmI'
 import {Nav} from '../pagesLaptop/components/Nav'
 import { ArrowDown } from "../pagesLaptop/components/ArrowDown";
 
+import room from '../../assets/glbs/room.glb'
+
 export function Room(props) {
   let position=[0,12.851,-5.38028]
   const pixels={
     x:'914px',
     y:'652px'
   }
-  const { nodes, materials } = useGLTF("/glbs/room.glb");
+  const { nodes, materials } = useGLTF(room);
   if(window.innerWidth < 567){
     position=[0,12.851,-5.38028]
     pixels.x='914px'
@@ -188,4 +190,4 @@ export function Room(props) {
   );
 }
 
-useGLTF.preload("/glbs/room.glb");
+useGLTF.preload(room);

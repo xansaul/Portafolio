@@ -6,9 +6,11 @@ import * as THREE from 'three'
 
 import * as TWEEN from "@tweenjs/tween.js";
 
+import ocni from '../../assets/glbs/ovni.glb'
+
 export function Ovni(props) {
   const ovni=useRef()
-  const { nodes, materials } = useGLTF("/glbs/ovni.glb");
+  const { nodes, materials } = useGLTF(ocni)
   useEffect(() => {
     const position= new TWEEN.Tween(ovni.current.rotation).to({x:.5}).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
     const rotation= new TWEEN.Tween(ovni.current.position).to({x:-500}, 5000).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
@@ -51,4 +53,4 @@ export function Ovni(props) {
   );
 }
 
-useGLTF.preload("/glbs/ovni.glb");
+useGLTF.preload(ocni);
