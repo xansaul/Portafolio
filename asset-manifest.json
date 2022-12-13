@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2d3ab7c.css",
-    "main.js": "/static/js/main.3fbb1846.js",
+    "main.css": "/static/css/main.98c73ee6.css",
+    "main.js": "/static/js/main.c5a9bfc5.js",
     "static/js/787.745797fe.chunk.js": "/static/js/787.745797fe.chunk.js",
     "static/media/city.glb": "/static/media/city.507770d1372f4c3db25f.glb",
     "static/media/room.glb": "/static/media/room.3195549c72514f909ab2.glb",
@@ -10,6 +10,7 @@
     "static/media/Gravity.pdf": "/static/media/Gravity.bfa76e5d1bce3a2ff4eb.pdf",
     "static/media/planets.png": "/static/media/planets.20bd9eea79a47dba8b60.png",
     "static/media/cube.svg": "/static/media/cube.9f75434235bc676a4a5a4dc94418fee3.svg",
+    "static/media/CV.pdf": "/static/media/CV.df0d9f0771f0f9a6e05b.pdf",
     "static/media/react.png": "/static/media/react.464a6a0cc6faefb72cb4.png",
     "static/media/django.png": "/static/media/django.4c399895f677cd3bfbc8.png",
     "static/media/unity.png": "/static/media/unity.dc710fc2319bdbb6858c.png",
@@ -22,12 +23,12 @@
     "static/media/instagram.svg": "/static/media/instagram.c2056460bbbf6c051f72df6d7c2fa6dc.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.386d46fc1dc9ea908ed8bb6235009335.svg",
     "index.html": "/index.html",
-    "main.d2d3ab7c.css.map": "/static/css/main.d2d3ab7c.css.map",
-    "main.3fbb1846.js.map": "/static/js/main.3fbb1846.js.map",
+    "main.98c73ee6.css.map": "/static/css/main.98c73ee6.css.map",
+    "main.c5a9bfc5.js.map": "/static/js/main.c5a9bfc5.js.map",
     "787.745797fe.chunk.js.map": "/static/js/787.745797fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2d3ab7c.css",
-    "static/js/main.3fbb1846.js"
+    "static/css/main.98c73ee6.css",
+    "static/js/main.c5a9bfc5.js"
   ]
 }
