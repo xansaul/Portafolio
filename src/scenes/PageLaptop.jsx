@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
-import React from 'react'
-import { PerspectiveCamera, OrbitControls, Stars } from '@react-three/drei'
+import React, { Suspense } from 'react'
+import { PerspectiveCamera, OrbitControls, Stars,Loader } from '@react-three/drei'
 import * as THREE from 'three'
 import { Room } from './glbsJSX/Room'
 
@@ -32,8 +32,10 @@ export const PageLaptop = () => {
     lightsConfig.spotOne.color='#D7DEFE'
   }
 
+
+
   return (
-    <div className="h-screen bg-gradient-to-b from-base-blue-200 to-base-blue-300">
+    <div className="h-screen bg-gradient-to-b from-base-blue-200 to-base-blue-300 relative">
       <Canvas
         flat 
         linear
@@ -51,9 +53,10 @@ export const PageLaptop = () => {
         <spotLight position={[0,50, 1]} color={lightsConfig.spotOne.color} intensity={lightsConfig.spotOne.intensity}/>
         <ambientLight intensity={lightsConfig.ambient.intensity} color={lightsConfig.ambient.color} />
         <PerspectiveCamera  rotation={cameraTransforms.rotation} position={cameraTransforms.position} > 
-          {/* <Laptop position={objPosition} scale={objScale} /> */}
-          <Room/>
-          <Stars saturation={1} count={2000} speed={1} />
+          <Suspense fallback={null}>
+            <Room/>
+            <Stars saturation={1} count={2000} speed={1} />
+          </Suspense>
         </PerspectiveCamera>
         {
           orbitControls?
@@ -71,6 +74,13 @@ export const PageLaptop = () => {
             null
         }
       </Canvas>
+      <Loader 
+        className="absolute z-50 top-0 w-screen h-screen"  
+        containerStyles={{
+          backgroundColor:'#05102C'
+        }}
+        dataInterpolation={(p) => `Cargando el modelo ${p.toFixed(2)}%`} 
+      />
     </div>
   )
 }

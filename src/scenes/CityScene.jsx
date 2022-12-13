@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
-import { PerspectiveCamera, OrbitControls, Stars } from '@react-three/drei'
+import { PerspectiveCamera, OrbitControls, Stars, Loader } from '@react-three/drei'
 import * as THREE from 'three'
 import { City } from './glbsJSX/City'
 import { useRef,useState } from 'react'
@@ -70,6 +70,13 @@ export const CityScene = ({children}) => {
         </PerspectiveCamera>
           
       </Canvas>
+      <Loader 
+        className="absolute z-50 top-0 w-screen h-screen"  
+        containerStyles={{
+          backgroundColor:'#05102C'
+        }}
+        dataInterpolation={(p) => `Cargando el modelo ${p.toFixed(2)}%`} 
+      />
         {children}
     </div>
   )
