@@ -1,8 +1,10 @@
-import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
-import { PerspectiveCamera, OrbitControls, Stars,Loader } from '@react-three/drei'
 import * as THREE from 'three'
-import { Room } from './glbsJSX/Room'
+import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera, OrbitControls, Stars } from '@react-three/drei'
+
+// models jsx
+import { Room } from './glbsJSX'
 
 export const PageLaptop = () => {
   const cameraTransforms= {
@@ -74,13 +76,7 @@ export const PageLaptop = () => {
             null
         }
       </Canvas>
-      <Loader 
-        className="absolute z-50 top-0 w-screen h-screen"  
-        containerStyles={{
-          backgroundColor:'#05102C'
-        }}
-        dataInterpolation={(p) => `Cargando el modelo ${p.toFixed(2)}%`} 
-      />
+
     </div>
   )
 }

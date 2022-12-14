@@ -1,10 +1,12 @@
-import { Canvas } from '@react-three/fiber'
-import React from 'react'
-import { PerspectiveCamera, OrbitControls, Stars, Loader } from '@react-three/drei'
+import React, { useRef,useState } from 'react'
 import * as THREE from 'three'
-import { City } from './glbsJSX/City'
-import { useRef,useState } from 'react'
-import { Ovni } from './glbsJSX/Ovni'
+import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera, Stars } from '@react-three/drei'
+
+// models jsx
+import { City,Ovni } from './glbsJSX'
+
+
 
 export const CityScene = ({children}) => {
 
@@ -70,13 +72,6 @@ export const CityScene = ({children}) => {
         </PerspectiveCamera>
           
       </Canvas>
-      <Loader 
-        className="absolute z-50 top-0 w-screen h-screen"  
-        containerStyles={{
-          backgroundColor:'#05102C'
-        }}
-        dataInterpolation={(p) => `Cargando el modelo ${p.toFixed(2)}%`} 
-      />
         {children}
     </div>
   )

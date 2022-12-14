@@ -155,7 +155,7 @@ export function Room(props) {
           width: pixels.x,
           height:pixels.y,
           overflowY:'auto',
-          zIndex: -5,
+          zIndex: -10,
         }}>
           <WhoAmI/>
           <Nav/>

@@ -1,9 +1,10 @@
-import { Canvas, useFrame } from '@react-three/fiber'
-import React from 'react'
-import { Float, Stars, OrbitControls,PerspectiveCamera, Loader } from '@react-three/drei'
+import React,{ useState } from 'react'
 import * as THREE from 'three'
-import { BannerModel } from './glbsJSX/BannerModel'
-import { useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Float, Stars, OrbitControls,PerspectiveCamera } from '@react-three/drei'
+
+// models jsx
+import { BannerModel } from './glbsJSX'
 
 
 export const Banner = ({children}) => {
@@ -49,7 +50,7 @@ export const Banner = ({children}) => {
 
   return (
     
-    <div className="h-screen w-full relative  bg-gradient-to-b from-base-blue-100 to-base-blue-200" onMouseMove={handleMouseMove} id="banner">
+    <div className="h-screen w-full relative bg-gradient-to-b from-base-blue-100 to-base-blue-200" onMouseMove={handleMouseMove} id="banner">
 
       <Canvas
         flat 
@@ -88,13 +89,6 @@ export const Banner = ({children}) => {
       }
 
       </Canvas>
-      <Loader 
-        className="absolute z-50 top-0 w-screen h-screen"  
-        containerStyles={{
-          backgroundColor:'#05102C'
-        }}
-        dataInterpolation={(p) => `Cargando el modelo ${p.toFixed(2)}%`} 
-      />
       {children}
     </div>
   )
