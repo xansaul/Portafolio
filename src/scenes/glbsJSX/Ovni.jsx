@@ -12,7 +12,7 @@ export function Ovni(props) {
   const ovni=useRef()
   const { nodes, materials } = useGLTF(ocni)
   useEffect(() => {
-    const position= new TWEEN.Tween(ovni.current.rotation).to({x:.5}).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
+    const position= new TWEEN.Tween(ovni.current.rotation).to({x:.5},3).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
     const rotation= new TWEEN.Tween(ovni.current.position).to({x:-500}, 5000).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
   }, [ovni])
   
