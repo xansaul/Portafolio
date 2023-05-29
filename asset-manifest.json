@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.39f2b245.css",
-    "main.js": "/static/js/main.0afb0f16.js",
+    "main.js": "/static/js/main.f066d057.js",
     "static/js/787.745797fe.chunk.js": "/static/js/787.745797fe.chunk.js",
     "static/media/city.glb": "/static/media/city.507770d1372f4c3db25f.glb",
     "static/media/room.glb": "/static/media/room.3195549c72514f909ab2.glb",
@@ -11,7 +11,7 @@
     "static/media/planets.png": "/static/media/planets.20bd9eea79a47dba8b60.png",
     "static/media/cube.svg": "/static/media/cube.9f75434235bc676a4a5a4dc94418fee3.svg",
     "static/media/Laptop.glb": "/static/media/Laptop.3f9cfcbcd960ab14da0d.glb",
-    "static/media/CV.pdf": "/static/media/CV.df0d9f0771f0f9a6e05b.pdf",
+    "static/media/CV.pdf": "/static/media/CV.57bcc437b7e0f1d301f4.pdf",
     "static/media/react.png": "/static/media/react.464a6a0cc6faefb72cb4.png",
     "static/media/django.png": "/static/media/django.4c399895f677cd3bfbc8.png",
     "static/media/unity.png": "/static/media/unity.dc710fc2319bdbb6858c.png",
@@ -25,11 +25,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.386d46fc1dc9ea908ed8bb6235009335.svg",
     "index.html": "/index.html",
     "main.39f2b245.css.map": "/static/css/main.39f2b245.css.map",
-    "main.0afb0f16.js.map": "/static/js/main.0afb0f16.js.map",
+    "main.f066d057.js.map": "/static/js/main.f066d057.js.map",
     "787.745797fe.chunk.js.map": "/static/js/787.745797fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39f2b245.css",
-    "static/js/main.0afb0f16.js"
+    "static/js/main.f066d057.js"
   ]
 }
