@@ -30,11 +30,14 @@ export const Experience = () => {
                     ¿Qué hago en mi ingeniería?
                   </h2>
                   <p className="mt-4 sm:text-xl">
-                    Actualmente 07/12/22 termina el segundo semestre de ingeniería en computación, en la cual llevé mecánica una parte de la oficina, en la cual se me encargo hacer un análisis de un problema donde lo analizara con mecánica, el cual me encargué de simular la gravedad de los planetas en unity, para ver más información de este proyecto puedes dar click <a className="ease-in duration-200 text-aqua-blue-100 hover:text-white font-bold" href={pdfPlanets} target="_blank" rel="noopener noreferrer">aquí.</a></p>
+                    Actualmente 07/12/22 termina el segundo semestre de ingeniería en computación, en la cual llevé mecánica una rama de la física, en la cual se me dejó hacer un análisis de un problema donde lo analizara con mecánica, en el cual me encargué de simular la gravedad de los planetas en unity, para ver más información de este proyecto puedes dar click <a className="ease-in duration-200 text-aqua-blue-100 hover:text-white font-bold" href={pdfPlanets} target="_blank" rel="noopener noreferrer">aquí.</a></p>
                     <p className="mt-2 sm:text-xl">O puedes un build de la aplicación desde el navegador dando click <a className="ease-in duration-200 text-aqua-blue-100 hover:text-white font-bold" href="https://fanciful-mandazi-f672f4.netlify.app/" target="_blank">aquí.</a></p>
                 </div>
                 <div className="w-auto m-auto mt-2">
-                  <img src={planets} alt="Planetas"/>
+                  <a href="https://fanciful-mandazi-f672f4.netlify.app/" target="_blank">
+                    <img src={planets} alt="Planetas" /> 
+                  </a>
+                  
                 </div>
                 <p className="mt-4 sm:text-xl">
                   Puedes ver mi CV   
