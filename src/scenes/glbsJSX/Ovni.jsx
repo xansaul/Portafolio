@@ -12,8 +12,8 @@ export function Ovni(props) {
   const ovni=useRef()
   const { nodes, materials } = useGLTF(ocni)
   useEffect(() => {
-    const position= new TWEEN.Tween(ovni.current.rotation).to({x:.5},3).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
-    const rotation= new TWEEN.Tween(ovni.current.position).to({x:-500}, 5000).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
+    const position= new TWEEN.Tween(ovni.current.position).to({x:-500},4000).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
+    const rotation= new TWEEN.Tween(ovni.current.rotation).to({z:.5}, 1500).easing(TWEEN.Easing.Sinusoidal.InOut).repeat(Infinity).yoyo(true).start()
   }, [ovni])
   
   let delta=0
@@ -23,10 +23,9 @@ export function Ovni(props) {
     TWEEN.update()
     delta = clock.getDelta();
     ovni.current.rotation.y+=Math.sin((speed * Math.PI) / 2)*delta
-    // ovni.current.rotation.x+=Math.cos((90 * Math.PI) / 2)*delta
   })
   return (
-    <group {...props} dispose={null} ref={ovni}>
+    <group {...props} dispose={null} ref={ovni} >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh

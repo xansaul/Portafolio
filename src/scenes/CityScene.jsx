@@ -1,16 +1,28 @@
 import React, { useRef,useState } from 'react'
 import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera, Stars } from '@react-three/drei'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { CameraShake, PerspectiveCamera, Stars } from '@react-three/drei'
 
 // models jsx
 import { City,Ovni } from './glbsJSX'
 
 
 
+function Rig() {
+  const [vec] = useState(() => new THREE.Vector3())
+  const { camera, mouse } = useThree()
+
+  useFrame(() =>{ 
+    // camera.position.lerp(vec.set(0, 100, mouse.x*15), 0.02)
+    camera.rotation.y = THREE.MathUtils.lerp(camera.rotation.y, -((mouse.x * 1.5*Math.PI) / 20), 0.01) 
+    camera.rotation.x = THREE.MathUtils.lerp(camera.rotation.x, ((mouse.y * 1.5*Math.PI) / 20), 0.01)
+  })
+  return <PerspectiveCamera />
+}
+
+
 export const CityScene = ({children}) => {
 
-  const refCamera=useRef()
 
   const cameraTransforms= {
     position:[-30,-120,-180],
@@ -31,25 +43,10 @@ export const CityScene = ({children}) => {
     // lightsConfig.directional.color='#D7DEFE'
   }
 
-  const [coords,setCoords] = useState({
-    x:0,
-    y:0
-  })
-  
-  let windowHalfX = window.innerWidth / 2;
-  let windowHalfY = window.innerHeight / 2;
-  
-
-  const handleMouseMove=(event)=>{
-      setCoords({
-        x:( event.clientX - windowHalfX ) / 2,
-        y:( event.clientY - windowHalfY ) / 2
-      })
-  }
 
 
   return (
-    <div className="h-screen bg-base-blue-400 relative" id="city" onMouseMove={handleMouseMove}>
+    <div className="h-screen bg-base-blue-400 relative" id="city" >
       <Canvas
         flat 
         linear
@@ -58,19 +55,15 @@ export const CityScene = ({children}) => {
             toneMapping: THREE.ACESFilmicToneMapping,
             toneMappingExposure: .9
           }}
-          camera={{
-            fov:65,
-          }}
+          camera={{ position: [0, 100, 0], fov: 65, rotation:[0,0,0]}}
       >
 
         <directionalLight color={lightsConfig.directional.color} intensity={lightsConfig.directional.intensity} />
         <ambientLight intensity={lightsConfig.ambient.intensity} color={lightsConfig.ambient.color} />
-        <PerspectiveCamera ref={refCamera} rotation={cameraTransforms.rotation} position={cameraTransforms.position} > 
-          <City refCamera={refCamera} coords={coords} rotation={[0,1.7,0]}/>
-          <Stars saturation={4} count={4000} speed={2}  radius={350} />
-          <Ovni scale={[7,7,7]} position={[300,400,-600]} rotation={[-.2,0,0]}/>
-        </PerspectiveCamera>
-          
+        <City rotation={[.01,70.6,0]}  position={[0,-30,-220]} />
+        <Stars saturation={4} count={4000} speed={2}  radius={350} />
+        <Ovni scale={[7,7,7]} position={[500,350,-900]} rotation={[0,0,-.5]}/>
+        <Rig />
       </Canvas>
         {children}
     </div>
