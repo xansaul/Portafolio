@@ -7,14 +7,7 @@ import city from '../../assets/glbs/city.glb'
 export function City(props) {
   const target = new THREE.Vector2();
   const { nodes, materials } = useGLTF(city);
-  const {coords,refCamera}=props
-  useFrame(()=>{
-    target.x = ( 1 - coords.x ) * 0.0004;
-    target.y = ( 1 - coords.y ) * 0.0004;
-    
-    refCamera.current.rotation.x += 0.05 * ( target.y - refCamera.current.rotation.x  )
-    refCamera.current.rotation.y += 0.05 * ( target.x - refCamera.current.rotation.y   )
-  })
+  
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
